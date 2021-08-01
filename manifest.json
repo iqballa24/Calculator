@@ -1,0 +1,31 @@
+{
+    "name": "Itungin",
+    "short_name": "Itungin",
+    "description": "Itungin adalah aplikasi untuk menghitung dari perhitungan sederhana seperti penjumlahan, pengurangan, perkalian dan pembagian",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#22252D",
+    "theme_color": "#22252D",
+    "icons": [
+        {
+            "src": "assets/img/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/img/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/img/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/img/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

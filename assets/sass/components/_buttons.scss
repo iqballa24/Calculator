@@ -1,0 +1,26 @@
+.button, .button__del{
+    flex-basis: 25%;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1rem;
+    margin: .5rem;
+    cursor: pointer;
+    background:  var(--secondary-color);
+    border-radius: .8rem;
+
+    @include media-breakpoint-up(md){
+        padding: .7rem;
+        margin: .4rem;
+        font-size: 1.4rem;
+        
+    }
+
+    &:hover {
+        filter: brightness(150%);
+
+    }
+
+    &.double{
+        flex-basis: 50%;
+    }
+}

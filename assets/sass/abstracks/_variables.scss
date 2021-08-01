@@ -1,0 +1,30 @@
+$font-primary: 'Poppins', sans-serif; 
+$font-secondary: Arial, Helvetica, sans-serif;
+
+// font weight
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: 700;
+$font-black: 900;
+
+// Color theme dark
+:root{
+    --primary-color: #22252D;
+    --secondary-color: #282B33;
+    --bg-color: #2A2D37;
+    --icon-color: #5d5f63;
+    --text-color: #ffffff;
+    --cyan: #4DEAD0;
+    --pink: #DC7A7B;
+}
+
+[data-theme="light"] {
+    --primary-color: #FFFFFF;
+    --secondary-color: #F7F7F7;
+    --bg-color: #F9F9F9;
+    --icon-color: #E8E8E8;
+    --text-color: #292D37;
+    --cyan: #4DEAD0;
+    --pink: #DC7A7B;
+}

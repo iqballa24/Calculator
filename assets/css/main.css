@@ -1,0 +1,243 @@
+/* ABSTRACKS
+========================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+:root {
+  --primary-color: #22252D;
+  --secondary-color: #282B33;
+  --bg-color: #2A2D37;
+  --icon-color: #5d5f63;
+  --text-color: #ffffff;
+  --cyan: #4DEAD0;
+  --pink: #DC7A7B;
+}
+
+[data-theme="light"] {
+  --primary-color: #FFFFFF;
+  --secondary-color: #F7F7F7;
+  --bg-color: #F9F9F9;
+  --icon-color: #E8E8E8;
+  --text-color: #292D37;
+  --cyan: #4DEAD0;
+  --pink: #DC7A7B;
+}
+
+/* BASE
+========================================================================== */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-size: 62.5%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+@media only screen and (min-width: 436px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+/* COMPONENTS
+========================================================================== */
+.button, .button__del {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1rem;
+  margin: .5rem;
+  cursor: pointer;
+  background: var(--secondary-color);
+  border-radius: .8rem;
+}
+
+@media only screen and (min-width: 436px) {
+  .button, .button__del {
+    padding: .7rem;
+    margin: .4rem;
+    font-size: 1.4rem;
+  }
+}
+
+.button:hover, .button__del:hover {
+  -webkit-filter: brightness(150%);
+          filter: brightness(150%);
+}
+
+.button.double, .button__del.double {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.card {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3rem;
+}
+
+@media only screen and (min-width: 436px) {
+  .card {
+    border: 1.6rem #242121 solid;
+    border-top-width: 6rem;
+    border-bottom-width: 6rem;
+    position: absolute;
+    width: 43.6rem;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .card:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 10px;
+  }
+  .card:after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    bottom: -65px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 50%;
+  }
+}
+
+.card__theme {
+  position: absolute;
+  margin: 1rem auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--icon-color);
+  text-align: center;
+  cursor: pointer;
+}
+
+.card__theme .theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: var(--bg-color);
+  width: 100%;
+  max-width: 9rem;
+  margin: auto;
+  padding: 1rem 0rem;
+  border-radius: 1.4rem;
+}
+
+@media only screen and (min-width: 436px) {
+  .card__theme .theme {
+    font-size: 1.4rem;
+  }
+}
+
+.card__theme .active {
+  color: var(--text-color);
+}
+
+/* PAGES
+========================================================================== */
+.calculator__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 43.6rem;
+  margin: auto;
+  text-align: right;
+  height: 100vh;
+  max-height: 82rem;
+  background: var(--primary-color);
+}
+
+.calculator__display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 70%;
+  color: var(--text-color);
+  width: 100%;
+  padding: 0rem 2rem;
+  background: var(--primary-color);
+  font-size: 2.8rem;
+  letter-spacing: .4rem;
+}
+
+.calculator__display h1 {
+  overflow: scroll;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
+.calculator__display h1::-webkit-scrollbar {
+  display: none;
+}
+
+.calculator__display p {
+  font-size: 2rem;
+}
+
+.calculator__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.calculator__row.top {
+  border-radius: 2.8rem 2.8rem 0 0;
+  padding-top: 3rem;
+}
+
+.calculator__row.bottom {
+  padding-bottom: 2rem;
+}
+
+.calculator__row .cyan {
+  color: var(--cyan);
+}
+
+.calculator__row .pink {
+  color: var(--pink);
+}
+/*# sourceMappingURL=main.css.map */
